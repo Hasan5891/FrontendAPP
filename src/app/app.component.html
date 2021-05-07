@@ -1,0 +1,522 @@
+
+<mat-toolbar class="container" >
+
+  <mat-list>
+  
+    <mat-list-item >
+      <mat-icon matListIcon color="white" >home</mat-icon>
+      <h1 mat-line class="brand" >IT PARK</h1>
+      <p mat-line style="font-size: 10px; font-weight:normal; vertical-align: top;line-height: 2em;">Line sdfgsd sdddfsd</p>
+    </mat-list-item>
+      
+  </mat-list>
+  <div class="un">IT PARK UNIVERSITY
+  </div>
+  </mat-toolbar>
+
+  <mat-divider [inset]="true"></mat-divider>
+
+  <div class="container">
+<mat-tab-group animationDuration="0ms">
+  <mat-tab  label="PERSONAL INFORMATION">
+<form>
+    <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile>
+
+        <div class="example-form">
+          <h2>Type of identity document</h2>
+        
+          <mat-form-field appearance="outline" class="example-full-width">
+          
+          <input matInput   value=" " >
+          </mat-form-field>
+          <h2>Series and number of Passport/ ID Card</h2>
+        
+          <mat-form-field appearance="outline" class="example-full-width">
+          
+          <input matInput   value=" " >
+          </mat-form-field>
+          <button mat-raised-button color="green">search</button>
+         
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        
+        <div class="example-form">
+          <label style="display: block;" >Date of birth</label>
+             <mat-form-field appearance="outline">
+          
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          <h2>Personal identification number of an individual (PIN)</h2>
+        
+          <mat-form-field appearance="outline" class="example-full-width">
+          
+          <input matInput   value=" " >
+          </mat-form-field>
+
+           
+               </div>
+      </mat-grid-tile>
+  
+      <mat-grid-tile>
+
+        <div class="example-form">
+
+          <h2>Firstname</h2>
+        
+          <mat-form-field appearance="outline" class="example-full-width">
+          
+          <input matInput   value=" Example - Azizbek" >
+          </mat-form-field>
+
+          
+          <h2>Father's name</h2>
+        
+          <mat-form-field appearance="outline" class="example-full-width">
+          
+          <input matInput   value="Example - Alisher o'gli" >
+          </mat-form-field>
+        
+          <h2>Surname</h2>
+        
+          <mat-form-field appearance="outline" class="example-full-width">
+          
+          <input matInput   value="Example - Ismoilov" >
+          </mat-form-field>
+
+        
+        
+         
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="example-form ">
+          <h2> Pick your favorite season</h2>
+           
+          <mat-radio-group aria-label="Select an option" style="width: 100%; height: 90px;margin: 30px 0;">
+            <mat-radio-button value="1" style="padding-right: 90px; height: 60px;">Male </mat-radio-button>
+            <mat-radio-button value="2">Female</mat-radio-button>
+          </mat-radio-group>
+
+
+          <h2>Tax Identification Number</h2>
+        
+          <mat-form-field appearance="outline" class="example-full-width">
+          
+          
+          <input matInput   value="Example - 485286" >
+          </mat-form-field>
+
+
+          <h2>Nationality</h2>
+        
+          <mat-form-field appearance="outline" class="example-full-width">
+          
+          <input matInput   value="" >
+          </mat-form-field>
+
+
+
+         
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+
+</form>
+
+
+   
+  </mat-tab>
+  <mat-tab label="PASSPORT INFORMATION">
+
+    <form>
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+  
+          <div class="example-form">
+
+            <h2>Series and number of the birth certificate</h2>
+        
+          <mat-form-field appearance="outline" class="example-full-width">
+          
+          <input matInput   value="Example - AA1234567" >
+          </mat-form-field>
+            
+           
+          <h2>Are you a special needs person?</h2>
+        
+          <mat-form-field appearance="outline" class="example-full-width">
+          
+          <input matInput   value="" >
+          </mat-form-field>
+            
+           
+          
+            <button mat-raised-button color="green">save</button>
+           
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          
+          <div class="example-form">
+            
+            <label style="display: block;" >Scanned copy of the identity document</label>
+            <mat-form-field  appearance="outline" >
+                      
+              <ngx-mat-file-input  ></ngx-mat-file-input>
+              <mat-icon matSuffix>attach_file</mat-icon>
+            </mat-form-field>
+
+            <label style="display: block;" >Scanned copy of the disability document</label>
+         
+            <mat-form-field  appearance="outline"  >
+              
+             
+              <ngx-mat-file-input    placeholder="Basic outline placeholder" ></ngx-mat-file-input>
+              <mat-icon matSuffix>attach_file</mat-icon>
+            </mat-form-field>
+
+
+
+           
+                 </div>
+        </mat-grid-tile>
+       <mat-divider></mat-divider>
+        
+     
+      </mat-grid-list>
+  
+  
+  </form>
+  
+    
+  </mat-tab>
+
+  <mat-tab label="PERMANMENT RESIDENCE INFORMATION">
+
+    <form>
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+  
+          <div class="example-form">
+            <h2>Citizenship</h2>
+            <mat-form-field   appearance="outline" class="example-full-width"> 
+             
+              <mat-select [(ngModel)]="selectedItem" name="citizenship">
+                <mat-option *ngFor="let country of countries" [value]="country.name">
+                  {{country.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <h2>Country</h2>
+            <mat-form-field   appearance="outline" class="example-full-width"> 
+             
+              <mat-select [(ngModel)]="selectedItem" name="country"  (ngModelChange)="onOptionsSelected()">
+                <mat-option *ngFor="let country of countries" [value]="country.name" >
+                  {{country.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <h2>Region</h2>
+            <mat-form-field   appearance="outline" class="example-full-width"> 
+             
+              <mat-select  name="region" >
+                <mat-option *ngFor="let region of regions" [value]="region">
+                  {{region}}
+                </mat-option>
+              </mat-select>    
+            </mat-form-field> 
+            
+            <button mat-raised-button color="green">save</button>
+           
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          
+          <div class="example-form">
+
+            <h2>City/District</h2>
+        
+            <mat-form-field appearance="outline" class="example-full-width">
+            
+            <input matInput   value="" >
+            </mat-form-field>
+            
+           
+            <h2>Adress</h2>
+        
+            <mat-form-field appearance="outline" class="example-full-width">
+            
+            <input matInput   value="" >
+            </mat-form-field>
+            
+            
+
+
+
+           
+                 </div>
+        </mat-grid-tile>
+    
+        
+     
+      </mat-grid-list>
+  
+  
+  </form>
+  
+    
+  </mat-tab>
+  <mat-tab label="HIGH SCHOOL (COLLEGE INFORMATION)">
+
+    <form>
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+  
+          <div class="example-form">
+            <h2>High School Information</h2>
+            <mat-form-field   appearance="outline" class="example-full-width"> 
+             
+              <mat-select  name="citizenship">
+               
+              </mat-select>
+            </mat-form-field>
+
+            <h2>Name</h2>
+        
+            <mat-form-field appearance="outline" class="example-full-width">
+            
+            <input matInput   value="" >
+            </mat-form-field>
+            <h2>Graduation Date</h2>
+        
+            <mat-form-field appearance="outline" class="example-full-width">
+            
+              <input matInput   value="" >
+              </mat-form-field>
+          
+           
+           
+           
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          
+          <div class="example-form">
+
+            <h2>Diploma number</h2>
+        
+            <mat-form-field appearance="outline" class="example-full-width">
+            
+            <input matInput   value="" >
+            </mat-form-field>
+            
+           
+            <h2>Adress</h2>
+        
+            <mat-form-field appearance="outline" class="example-full-width">
+            
+            <input matInput   value="" >
+            </mat-form-field>
+            
+            
+            <label style="display: block;" >Upload diploma (Upload only diploma)</label>
+         
+            <mat-form-field  appearance="outline"  >
+              
+             
+              <ngx-mat-file-input    placeholder="Basic outline placeholder" ></ngx-mat-file-input>
+              <mat-icon matSuffix>attach_file</mat-icon>
+            </mat-form-field>
+
+
+
+           
+                 </div>
+        </mat-grid-tile>
+     
+        
+     
+      </mat-grid-list>
+  
+  
+  </form>
+  
+    
+  </mat-tab>
+  <mat-tab label="ENGLISH LANGUAGE PROFICIENCY">
+
+    <form>
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+  
+          <div class="example-form">
+          
+
+            <h2>Name of the Test</h2>
+        
+            <mat-form-field appearance="outline" class="example-full-width">
+            
+            <input matInput   value="" >
+            </mat-form-field>
+            <h2>Score obtained</h2>
+        
+            <mat-form-field appearance="outline" >
+            
+              <input matInput   value="" >
+              </mat-form-field>
+          
+           
+           
+           
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          
+          <div class="example-form">
+
+            <h2>Test Date</h2>
+        
+            <mat-form-field appearance="outline" class="example-full-width">
+            
+            <input matInput   value="" >
+            </mat-form-field>
+            
+           
+         
+            
+            
+            <label style="display: block;" >Upload certificate</label>
+         
+            <mat-form-field  appearance="outline"  >
+              
+             
+              <ngx-mat-file-input    placeholder="Basic outline placeholder" ></ngx-mat-file-input>
+              <mat-icon matSuffix>attach_file</mat-icon>
+            </mat-form-field>
+
+
+
+           
+                 </div>
+        </mat-grid-tile>
+     
+        
+     
+      </mat-grid-list>
+  
+  
+  </form>
+  
+    
+  </mat-tab>
+  <mat-tab label="SELECT THE ACADEMIC DIRECTION">
+
+    <form>
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+  
+          <div class="example-form">
+          
+
+            <h2>Degree</h2>
+            <mat-form-field   appearance="outline" class="example-full-width"> 
+             
+              <mat-select  name="citizenship">
+               
+              </mat-select>
+            </mat-form-field>
+             <h2>Academic Direction</h2>
+            <mat-form-field   appearance="outline" class="example-full-width"> 
+             
+              <mat-select  name="citizenship">
+               
+              </mat-select>
+            </mat-form-field>
+          
+           
+           
+           
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          
+          <div class="example-form">
+
+            <h2>Test center</h2>
+        
+            <mat-form-field appearance="outline" class="example-full-width">
+            
+            <input matInput   value="" >
+            </mat-form-field>
+            
+                      
+                 </div>
+        </mat-grid-tile>
+     
+        
+     
+      </mat-grid-list>
+  
+  
+  </form>
+  
+    
+  </mat-tab>
+  <mat-tab label="CONTACT INFORMATION">
+
+    <form>
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+  
+          <div class="example-form">
+          
+
+            <h2>Mobile phone number</h2>
+        
+            <mat-form-field appearance="outline" class="example-full-width">
+            
+            <input matInput   value="" type="tel">
+            </mat-form-field>
+          
+           
+           
+           
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          
+          <div class="example-form">
+
+            <h2>E-mail</h2>
+        
+            <mat-form-field appearance="outline" class="example-full-width">
+            
+            <input matInput   value="" >
+            </mat-form-field>
+            
+                      
+                 </div>
+        </mat-grid-tile>
+           
+     
+      </mat-grid-list>
+  
+  
+  </form>
+  
+    
+  </mat-tab>
+  
+</mat-tab-group>
+
+
+  </div>
+
+
+

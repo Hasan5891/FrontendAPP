@@ -1,0 +1,168 @@
+
+  .mat-tab-label {
+    height: 58px;
+
+    cursor: pointer;
+    box-sizing: border-box;
+    opacity: initial !important;
+    min-width: 160px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+    font-size: 16px;;
+}
+
+
+
+.mat-toolbar {
+    padding: 0 0 !important;
+        background: #ffffff !important;
+        color: rgba(0,0,0,.87) !important;
+        font-size: 35px !important;
+    }
+    .brand{
+
+        font-size: 30px !important; font-weight: 600 !important;
+    }
+    .mat-icon {
+        font-size: 50px;
+      }
+      .mat-divider.mat-divider-inset {
+        margin-left: 0 !important;
+    }
+   .un{
+  
+
+margin-left: 40%;
+
+   }
+    .container {
+     
+        padding-right: 90px !important;
+        padding-left: 90px !important;
+      
+    }
+   .uuu{
+        min-width: 150px;
+        max-width: 500px;
+        width: 100%;
+
+
+    }
+    
+   .mat-line1{
+
+       font-size: 60px;
+    }
+    .mat-toolbar-row, .mat-toolbar-single-row {
+        height: 104px;
+    }
+.mat-list{
+
+    font-size: 2.8rem;
+}
+.mat-body, .mat-body-1, .mat-typography {
+    font: 600 24px/30px Roboto, "Helvetica Neue", sans-serif !important;
+    letter-spacing: normal !important;
+}
+.mat-tab-header {
+
+    padding-top: 25px;
+}
+.mat-tab-body {
+    margin-top: 30px;
+}
+.example-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+    min-width: 150px;
+    margin-right: 2em;
+    width: 80%;
+  }
+  .mat-form-field-underline {
+    display: none;
+  }
+  .example-full-width {
+    width: 100%;
+  }
+  form  {
+    font: 40 16px/24px Roboto, "Helvetica Neue", sans-serif !important;
+  }
+  form label {
+     
+   
+    font: 500 16px/24px Roboto, "Helvetica Neue", sans-serif !important;
+  }
+   .input.mat-input-element {
+   
+    margin: 10px 0; border: 1px solid #000; border-radius: 30px;padding-left: 20px;line-height: 30px; height: 50px;width: 100%;
+  }
+
+  .input-field {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+    background-color: #2ae487 !important;
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: initial;
+}
+
+.mat-form-field-outline-start {
+ 
+  border-style: none !important;
+  min-width:  0 !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border-radius:25px  !important;
+  border-left-style: solid !important;
+}
+.mat-raised-button{
+    background-color: rgb(13, 172, 39)  !important;
+    padding: 5px 45px!important;
+    margin-top: 15px;
+    color: white;
+
+    border: 1px solid #000; border-radius: 30px !important;
+ }
+
+ .example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  .mat-form-field-infix {
+  
+    
+    align-items: center;
+   
+}
+  .example-radio-button {
+    margin: 5px;
+  }
+  .mat-select-min-line{
+padding: 0  12px;
+
+  }
+.example-form h2{
+
+  margin: 0 0 3px;
+  font: 500 16px/24px Roboto, "Helvetica Neue", sans-serif !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: .8em 0 0em 0  !important;
+  margin-bottom: 1rem;
+}
